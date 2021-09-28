@@ -1,0 +1,74 @@
+$primary-color: white;
+$secondary-color: black;
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+header {
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../assets/negative-space-black-forest-dawn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  nav {
+    justify-content: flex-start;
+  }
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  height: 1750px;
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .beskrivning {
+    width: 250px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: lightgrey;
+  }
+  img {
+    width: 200px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 5px grey);
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: $secondary-color;
+  address {
+    color: $primary-color;
+    font-style: normal;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-around;
+    .profile {
+      width: 500px;
+    }
+  }
+}
