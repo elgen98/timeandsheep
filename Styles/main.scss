@@ -1,5 +1,4 @@
-$primary-color: white;
-$secondary-color: black;
+@use "mixins";
 body {
   display: flex;
   flex-direction: column;
