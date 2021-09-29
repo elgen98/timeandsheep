@@ -1,16 +1,17 @@
-body {
+header, section, section .profile, footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
   margin: 0 auto;
   width: 100%;
 }
 
 header {
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
   background-repeat: no-repeat;
@@ -21,23 +22,19 @@ header nav {
   justify-content: flex-start;
 }
 
-section {
+h1 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+section {
   margin: 25px;
   height: 1750px;
-}
-section .profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 section .beskrivning {
   width: 250px;
   padding: 30px;
+  margin: 25px;
   border-radius: 5px;
   background-color: lightgrey;
 }
@@ -48,10 +45,6 @@ section img {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 500px;
   background-color: black;
 }
@@ -62,14 +55,16 @@ footer address {
 
 @media screen and (min-width: 768px) {
   section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-around;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 500px 500px;
+    height: 1050px;
   }
   section .profile {
     width: 500px;
+  }
+  section img {
+    width: 300px;
   }
 }
 
