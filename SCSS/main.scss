@@ -5,9 +5,9 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-header {
-  color: variables.$primary-color;
+header > #welcome {
   @extend %flex;
+  color: variables.$primary-color;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
   background-repeat: no-repeat;
@@ -15,8 +15,13 @@ header {
   background-position: center;
 
   nav {
-    justify-content: flex-start;
+    display: flex;
+
+    a{
+      color: variables.$primary-color;
+    }
   }
+  
 }
 h1 {
   display: flex;
@@ -57,6 +62,7 @@ footer {
     display: grid;
     grid-template-columns: 500px 500px;
     grid-template-rows: 500px 500px;
+    row-gap: 25px;
     height: 1050px;
     .profile {
       width: 500px;
