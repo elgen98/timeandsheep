@@ -1,4 +1,4 @@
-header > #welcome, section, section .profile, footer {
+section, section .profile, footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,10 @@ body {
   width: 100%;
 }
 
-header > #welcome {
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 35vh;
   color: white;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -18,10 +21,22 @@ header > #welcome {
   background-size: cover;
   background-position: center;
 }
-header > #welcome nav {
+header #welcome {
   display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
 }
-header > #welcome nav a {
+header nav {
+  height: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+header nav a {
   color: white;
 }
 

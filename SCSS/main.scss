@@ -5,8 +5,10 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-header > #welcome {
-  @extend %flex;
+header  {
+  display: flex;
+  flex-direction: column;
+  gap: 35vh;
   color: variables.$primary-color;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -14,12 +16,27 @@ header > #welcome {
   background-size: cover;
   background-position: center;
 
-  nav {
+  #welcome {
     display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+
+  }
+
+  nav {
+    height: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
 
     a{
       color: variables.$primary-color;
     }
+    
   }
   
 }
