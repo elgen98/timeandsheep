@@ -5,7 +5,7 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-header  {
+header {
   display: flex;
   flex-direction: column;
   gap: 35vh;
@@ -21,28 +21,28 @@ header  {
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
-
+    text-align: center;
   }
 
   nav {
+    background-color: rgba($color: #ffffff, $alpha: 0.25);
     height: 50px;
-    margin-right: 50px;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
-    gap: 5px;
+    padding-right: 25px;
+    gap: 25px;
 
-    a{
+    a {
       color: variables.$primary-color;
+      text-decoration: none;
     }
-    
   }
-  
 }
 h1 {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 section {
   @extend %flex;
@@ -50,7 +50,7 @@ section {
   height: 1750px;
 
   .profile {
-    @extend %flex
+    @extend %flex;
   }
   .beskrivning {
     width: 250px;
@@ -84,8 +84,11 @@ footer {
     .profile {
       width: 500px;
     }
-    img{
+    img {
       width: 300px;
     }
+  }
+  footer {
+    height: 250px;
   }
 }
