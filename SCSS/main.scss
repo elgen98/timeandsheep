@@ -8,7 +8,7 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  gap: 35vh;
+  gap: 25vh;
   color: variables.$primary-color;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -28,7 +28,6 @@ header {
     background-color: rgba($color: #ffffff, $alpha: 0.25);
     height: 50px;
     display: flex;
-    flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
     padding-right: 25px;
@@ -38,6 +37,13 @@ header {
       color: variables.$primary-color;
       text-decoration: none;
     }
+  }
+  .arrowLink {
+    display: flex;
+    justify-content: center;
+    color: variables.$primary-color;
+    text-decoration: none;
+    margin-top: 50px;
   }
 }
 h1 {
@@ -63,6 +69,12 @@ section {
     width: 200px;
     border-radius: 50%;
     filter: drop-shadow(5px 5px 5px grey);
+  }
+  .arrowLink {
+    display: flex;
+    justify-content: center;
+    color: variables.$secondary-color;
+    text-decoration: none;
   }
 }
 footer {

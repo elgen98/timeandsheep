@@ -13,7 +13,7 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  gap: 35vh;
+  gap: 25vh;
   color: white;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -32,7 +32,6 @@ header nav {
   background-color: rgba(255, 255, 255, 0.25);
   height: 50px;
   display: flex;
-  flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
   padding-right: 25px;
@@ -41,6 +40,13 @@ header nav {
 header nav a {
   color: white;
   text-decoration: none;
+}
+header .arrowLink {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 50px;
 }
 
 h1 {
@@ -63,6 +69,12 @@ section img {
   width: 200px;
   border-radius: 50%;
   filter: drop-shadow(5px 5px 5px grey);
+}
+section .arrowLink {
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
 }
 
 footer {
