@@ -22,6 +22,7 @@ header {
     justify-content: center;
     align-content: center;
     text-align: center;
+    font-size: 15pt;
   }
 
   nav {
@@ -43,7 +44,7 @@ header {
     justify-content: center;
     color: variables.$primary-color;
     text-decoration: none;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 }
 h1 {
@@ -65,17 +66,21 @@ section {
     border-radius: 5px;
     background-color: lightgrey;
   }
-  img {
-    width: 200px;
-    border-radius: 50%;
-    filter: drop-shadow(5px 5px 5px grey);
+  .image-wrapper {
+    width: 250px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0px 0px 30px 0px grey;
+    }
   }
-  .arrowLink {
-    display: flex;
-    justify-content: center;
-    color: variables.$secondary-color;
-    text-decoration: none;
-  }
+}
+.arrowLink {
+  display: flex;
+  justify-content: center;
+  color: variables.$secondary-color;
+  text-decoration: none;
+  margin-bottom: 50px;
 }
 footer {
   @extend %flex;
@@ -86,18 +91,26 @@ footer {
     font-style: normal;
   }
 }
-@media screen and (min-width: 768px) {
+@include mixins.desktop-only {
+  header > #welcome {
+    font-size: 12pt;
+  }
   section {
     display: grid;
     grid-template-columns: 500px 500px;
     grid-template-rows: 500px 500px;
     row-gap: 25px;
+    column-gap: 50px;
     height: 1050px;
     .profile {
       width: 500px;
     }
+    .beskrivning {
+      width: 400px;
+      padding: 15px;
+    }
     img {
-      width: 300px;
+      width: 250px;
     }
   }
   footer {
