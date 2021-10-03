@@ -8,11 +8,13 @@ section, section .profile {
 body {
   margin: 0 auto;
   width: 100%;
+  font-size: 12pt;
 }
 
 .header {
   background-color: rgba(255, 255, 255, 0.15);
   width: 100%;
+  position: absolute;
 }
 
 .header ul {
@@ -26,8 +28,8 @@ body {
 .header li a {
   color: #ffffff;
   display: block;
-  padding: 20px 20px;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .header li a:hover,
@@ -45,7 +47,6 @@ body {
 /* menu icon */
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -109,7 +110,7 @@ body {
 #home {
   display: flex;
   flex-direction: column;
-  gap: 25vh;
+  justify-content: space-between;
   color: white;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -119,11 +120,10 @@ body {
 }
 #home #welcome {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-content: center;
+  flex-flow: column;
   text-align: center;
-  font-size: 15pt;
+  margin-top: 35vh;
+  font-size: 1.4rem;
 }
 #home .arrowLink {
   display: flex;
@@ -208,6 +208,7 @@ footer a {
 
   .header li a {
     padding: 20px 30px;
+    font-size: 1rem;
   }
 
   .header .menu {
@@ -221,7 +222,7 @@ footer a {
   }
 
   #home > #welcome {
-    font-size: 12pt;
+    font-size: 1.2rem;
   }
 
   section {
@@ -252,6 +253,6 @@ footer a {
   }
   footer address,
 footer a {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }

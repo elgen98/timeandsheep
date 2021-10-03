@@ -4,10 +4,12 @@
 body {
   margin: 0 auto;
   width: 100%;
+  font-size: 12pt;
 }
 .header {
   background-color: rgba($color: #ffffff, $alpha: 0.15);
   width: 100%;
+  position: absolute;
 }
 
 .header ul {
@@ -21,8 +23,8 @@ body {
 .header li a {
   color: #ffffff;
   display: block;
-  padding: 20px 20px;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 .header li a:hover,
 .header .menu-btn:hover {
@@ -41,7 +43,6 @@ body {
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -105,7 +106,7 @@ body {
 #home {
   display: flex;
   flex-direction: column;
-  gap: 25vh;
+  justify-content: space-between;
   color: variables.$primary-color;
   height: 100vh;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -115,11 +116,10 @@ body {
 
   #welcome {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
+    flex-flow: column;
     text-align: center;
-    font-size: 15pt;
+    margin-top: 35vh;
+    font-size: 1.4rem;
   }
 
   .arrowLink {
@@ -204,6 +204,7 @@ footer {
   }
   .header li a {
     padding: 20px 30px;
+    font-size: 1rem;
   }
   .header .menu {
     clear: none;
@@ -213,10 +214,10 @@ footer {
   .header .menu-icon {
     display: none;
   }
-
   #home > #welcome {
-    font-size: 12pt;
+    font-size: 1.2rem;
   }
+
   section {
     display: grid;
     grid-template-columns: 500px 500px;
@@ -243,7 +244,7 @@ footer {
     padding-top: 50px;
     address,
     a {
-      font-size: 1em;
+      font-size: 1rem;
     }
   }
 }
