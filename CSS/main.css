@@ -1,4 +1,4 @@
-section, section .profile, footer {
+section, section .profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,12 +84,33 @@ section .image-wrapper img {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 15px;
   height: 500px;
   background-color: black;
 }
-footer address {
+footer div,
+footer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer nav {
+  gap: 20px;
+}
+footer address,
+footer a {
   color: white;
   font-style: normal;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin-left: 75px;
+}
+footer a {
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {

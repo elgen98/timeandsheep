@@ -83,12 +83,32 @@ section {
   margin-bottom: 50px;
 }
 footer {
-  @extend %flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 15px;
   height: 500px;
   background-color: variables.$secondary-color;
-  address {
+  div,
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav {
+    gap: 20px;
+  }
+  address,
+  a {
     color: variables.$primary-color;
     font-style: normal;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-left: 75px;
+  }
+  a {
+    font-size: 1.5rem;
   }
 }
 @include mixins.desktop-only {
