@@ -138,6 +138,14 @@ footer a {
   }
 
   footer {
-    height: 250px;
+    height: 20vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  footer address,
+footer a {
+    font-size: 1em;
   }
 }
