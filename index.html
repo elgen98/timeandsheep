@@ -12,12 +12,18 @@
     <title>Document</title>
   </head>
   <body>
-    <header id="home">
-      <nav>
-        <a href="#home">Hem</a>
-        <a href="#about">Om</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
+    <div id="home">
+      <header class="header">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <ul>
+          <li><a href="#home">Hem</a></li>
+          <li><a href="#about">Om</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </header>
       <div id="welcome">
         <h2>Welcome to nature</h2>
         <p>A journey through time and sheep</p>
@@ -26,7 +32,7 @@
       <a href="#about" class="arrowLink"
         ><i class="fa fa-arrow-circle-down fa-lg"></i
       ></a>
-    </header>
+    </div>
     <h2 id="about">Träffa laget</h2>
     <section>
       <div class="profile">

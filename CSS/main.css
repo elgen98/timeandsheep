@@ -10,7 +10,7 @@ body {
   width: 100%;
 }
 
-header {
+#home {
   display: flex;
   flex-direction: column;
   gap: 25vh;
@@ -21,7 +21,88 @@ header {
   background-size: cover;
   background-position: center;
 }
-header #welcome {
+#home .header {
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 100%;
+  z-index: 3;
+}
+#home .header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+#home .header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+#home .header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+#home .header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+#home .header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+#home .header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+#home .header .menu-icon .navicon:before,
+#home .header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+#home .header .menu-icon .navicon:before {
+  top: 5px;
+}
+#home .header .menu-icon .navicon:after {
+  top: -5px;
+}
+#home .header .menu-btn {
+  display: none;
+}
+#home .header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+#home .header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+#home .header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+#home .header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+#home .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+#home .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+#home #welcome {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -29,20 +110,7 @@ header #welcome {
   text-align: center;
   font-size: 15pt;
 }
-header nav {
-  background-color: rgba(255, 255, 255, 0.25);
-  height: 50px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 25px;
-  gap: 25px;
-}
-header nav a {
-  color: white;
-  text-decoration: none;
-}
-header .arrowLink {
+#home .arrowLink {
   display: flex;
   justify-content: center;
   color: white;
@@ -114,7 +182,25 @@ footer a {
 }
 
 @media screen and (min-width: 768px) {
-  header > #welcome {
+  .header li {
+    float: right;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  #home > #welcome {
     font-size: 12pt;
   }
 
