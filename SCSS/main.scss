@@ -31,15 +31,11 @@ body {
   text-decoration: underline;
 }
 
-/* menu */
-
 .header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-
-/* menu icon */
 
 .header .menu-icon {
   cursor: pointer;
@@ -76,8 +72,6 @@ body {
 .header .menu-icon .navicon:after {
   top: -5px;
 }
-
-/* menu btn */
 
 .header .menu-btn {
   display: none;
@@ -188,10 +182,7 @@ footer {
     font-style: normal;
     font-size: 1.4rem;
     text-decoration: none;
-    margin-left: 75px;
-  }
-  a {
-    font-size: 1.5rem;
+    margin-left: 25vw;
   }
 }
 @include mixins.desktop-only {
@@ -237,14 +228,15 @@ footer {
     }
   }
   footer {
-    height: 20vh;
+    height: 30vh;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
-    padding-top: 50px;
+    align-items: center;
+
     address,
     a {
-      font-size: 1rem;
+      margin: 0;
+      font-size: 1.2rem;
     }
   }
 }
